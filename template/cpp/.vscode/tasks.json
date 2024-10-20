@@ -1,0 +1,40 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cmake",
+			"label": "Configure Debug",
+			"command": "configure",
+			"problemMatcher": [],
+			"preset": "debug"
+		},
+		{
+			"type": "cmake",
+			"label": "Configure Release",
+			"command": "configure",
+			"problemMatcher": [],
+			"preset": "release"
+		},
+		{
+			"type": "cmake",
+			"label": "Build Debug",
+			"command": "build",
+			"problemMatcher": [],
+			"preset": "debug"
+		},
+		{
+			"type": "cmake",
+			"label": "Package Sources",
+			"command": "build",
+			"problemMatcher": [],
+			"preset": "pack-sources"
+		},
+		{
+			"type": "cmake",
+			"label": "Package Release",
+			"command": "build",
+			"problemMatcher": [],
+			"preset": "release"
+		}
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"version": 7,
+	"configurePresets": [
+		{
+			"name": "debug",
+			"displayName": "Debug",
+			"generator": "Ninja",
+			"binaryDir": "${sourceDir}/build/${presetName}",
+			"installDir": "${sourceDir}/dist/sources",
+			"cacheVariables": {
+				"CMAKE_INSTALL_PREFIX": "${sourceDir}/dist/sources",
+				"CMAKE_C_COMPILER": "gcc",
+				"CMAKE_CXX_COMPILER": "g++",
+				"CMAKE_BUILD_TYPE": "Debug"
+			}
+		},
+		{
+			"name": "release",
+			"displayName": "Release",
+			"generator": "Ninja",
+			"binaryDir": "${sourceDir}/build/${presetName}",
+			"installDir": "${sourceDir}/dist/release",
+			"cacheVariables": {
+				"CMAKE_INSTALL_PREFIX": "${sourceDir}/dist/release",
+				"CMAKE_C_COMPILER": "gcc",
+				"CMAKE_CXX_COMPILER": "g++",
+				"CMAKE_BUILD_TYPE": "Release"
+			}
+		}
+	],
+	"buildPresets": [
+		{
+			"name": "debug",
+			"displayName": "Debug",
+			"configurePreset": "debug",
+			"configuration": "Debug"
+		},
+		{
+			"name": "pack-sources",
+			"displayName": "Package Sources",
+			"configurePreset": "debug",
+			"configuration": "Debug",
+			"targets": ["package_source"]
+		},
+		{
+			"name": "release",
+			"displayName": "Release",
+			"configurePreset": "release",
+			"configuration": "Release",
+			"targets": ["package"],
+			"cleanFirst": true
+		}
+	]
+}
