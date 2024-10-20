@@ -1,1 +1,1 @@
-template/ -linguist-detectable
+template/** -linguist-detectable
