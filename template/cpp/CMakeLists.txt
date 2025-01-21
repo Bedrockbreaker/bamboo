@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project({{PROJECT_NAME}} VERSION 1.1.0)
+project({{PROJECT_NAME}} VERSION 1.0.0)
 
 add_library(CPP23 INTERFACE)
 target_compile_features(CPP23 INTERFACE cxx_std_23)
