@@ -4,6 +4,7 @@ import { program } from "@commander-js/extra-typings";
 
 import "./cpp.js";
 import "./cs.js";
+import "./obsidian.js";
 
 import packageJson from "../package.json" with { type: "json" };
 
