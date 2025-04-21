@@ -1,6 +1,8 @@
 [*.cs]
+end_of_line = lf
 indent_size = 4
 indent_style = tab
+insert_final_newline = true
 tab_width = 4
 
 dotnet_separate_import_directive_groups = true
